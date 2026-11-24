@@ -4,3 +4,4 @@ __pycache__/
 .cargo-docker/
 target-compat/
 tests/
+dist/
