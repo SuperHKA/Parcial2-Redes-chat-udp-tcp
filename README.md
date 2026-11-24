@@ -28,8 +28,7 @@ Python 3, Rust, egui, libvirt/QEMU/KVM y virt-manager.
 | `client-rust/` | Interfaz gráfica estilo WhatsApp (Rust + egui) |
 | `vm/preparar-vm.sh` | Conecta la VM a la red NAT de libvirt, la arranca y da su IP |
 | `vm/instalar-servidor.sh` | Instala el servidor en la VM como servicio systemd |
-| `tests/prueba_4_usuarios.py` | Prueba automática con 4 usuarios (TCP, UDP y privados) |
-| `tests/bots_demo.py` | 3 usuarios simulados para hacer la demo con la interfaz |
+
 
 ## Protocolo
 
@@ -97,22 +96,6 @@ En la máquina física, abre una ventana por usuario (o usa otras VMs u otros PC
 ```
 
 Sin argumentos aparece la pantalla de login para escribir la IP y el nombre.
-
-Para completar los 4 usuarios con usuarios simulados:
-
-```bash
-cd tests && python3 bots_demo.py IP_VM ana 300
-```
-
-## Pruebas
-
-```bash
-python3 server/server.py --host 127.0.0.1 &
-cd tests && python3 prueba_4_usuarios.py 127.0.0.1
-```
-
-Comprueba que los 4 usuarios reciben los 4 mensajes de grupo por TCP y los 4 por UDP,
-y que los mensajes privados solo llegan a su destinatario.
 
 ## Ver los paquetes (evidencia para el informe)
 
